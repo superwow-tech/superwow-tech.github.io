@@ -1,44 +1,57 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, CheckCircle2 } from "lucide-react";
 import { CenteredCard } from "../ui/CenteredCard";
+import { useTranslation } from "../../contexts/LanguageContext";
 import { caseStudies } from "../../lib/constants/case-studies";
 
 export function CaseStudies() {
+  const { t } = useTranslation();
+
+  const caseStudyItems = [
+    { ...caseStudies[0], ...t.caseStudies.items.motion },
+    { ...caseStudies[1], ...t.caseStudies.items.saas },
+    { ...caseStudies[2], ...t.caseStudies.items.ai },
+  ];
+
   return (
     <section id="work" className="relative py-16 overflow-hidden">
       {/* Background gradient accent */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[120px]" />
       
       <div className="relative mx-auto max-w-7xl px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="flex flex-col md:flex-row items-start md:items-end justify-between mb-16 gap-4"
-        >
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-2">
-              <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-                Selected work
-              </span>
-            </h2>
-            <p className="text-gray-400">List of our projects and services</p>
-          </div>
-          <motion.a
-            href="#contact"
-            whileHover={{ x: 5 }}
-            className="text-sm text-purple-400 hover:text-purple-300 flex items-center gap-2 group"
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={t.caseStudies.title}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-col md:flex-row items-start md:items-end justify-between mb-16 gap-4"
           >
-            Need something similar?
-            <ExternalLink className="w-4 h-4 group-hover:rotate-45 transition-transform" />
-          </motion.a>
-        </motion.div>
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-2">
+                <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+                  {t.caseStudies.title}
+                </span>
+              </h2>
+              <p className="text-gray-400">{t.caseStudies.subtitle}</p>
+            </div>
+            <motion.a
+              href="#contact"
+              whileHover={{ x: 5 }}
+              className="text-sm text-purple-400 hover:text-purple-300 flex items-center gap-2 group"
+            >
+              {t.caseStudies.needSimilar}
+              <ExternalLink className="w-4 h-4 group-hover:rotate-45 transition-transform" />
+            </motion.a>
+          </motion.div>
+        </AnimatePresence>
         
         <div className="grid md:grid-cols-3 gap-6">
-          {caseStudies.map((c, i) => (
+          {caseStudyItems.map((c, i) => (
             <CenteredCard
               key={c.name}
               delay={i * 0.15}

@@ -1,0 +1,95 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "work": "Case Studies",
+    "stack": "Tech Stack",
+    "contact": "Contact",
+    "getQuote": "Get a quote"
+  },
+  "hero": {
+    "tagline": "AI-Driven Development Studio",
+    "title": "Where AI creativity meets web development",
+    "subtitle": "Built to move your business faster",
+    "startProject": "Start a Project",
+    "viewCaseStudies": "View Case Studies"
+  },
+  "services": {
+    "title": "What we do",
+    "subtitle": "From proof‑of‑concepts to production platforms. Modular delivery, rigorous testing, and clean hand‑offs.",
+    "items": {
+      "design": {
+        "title": "Design & Development",
+        "desc": "Beautiful interfaces, smooth UX, and scalable architecture."
+      },
+      "custom": {
+        "title": "Custom Software",
+        "desc": "Full-stack web, from idea to production."
+      },
+      "ai": {
+        "title": "AI Engineering",
+        "desc": "Agents, LLM integrations, data pipelines & workflow automation."
+      }
+    }
+  },
+  "caseStudies": {
+    "title": "Selected work",
+    "subtitle": "List of our projects and services",
+    "needSimilar": "Need something similar?",
+    "items": {
+      "motion": {
+        "name": "Superwow Motion",
+        "role": "Motion design studio",
+        "impact": [
+          "Motion graphics",
+          "Marketing materials",
+          "Website design"
+        ]
+      },
+      "saas": {
+        "name": "Superwow SaaS",
+        "role": "SaaS platform",
+        "impact": [
+          "Marketing automation",
+          "Pricing optimization",
+          "Reporting and analytics"
+        ]
+      },
+      "ai": {
+        "name": "Superwow AI Solutions",
+        "role": "AI-powered solutions",
+        "impact": [
+          "Agents",
+          "LLM integrations",
+          "Workflow automation"
+        ]
+      }
+    }
+  },
+  "techStack": {
+    "title": "Tech expertise & skills",
+    "subtitle": "We pick boring‑reliable tools first, then sprinkle novelty where it matters."
+  },
+  "contact": {
+    "tagline": "Let's Build Something Amazing",
+    "title": "Let's build your next release",
+    "subtitle": "Tell us about your goals and constraints. We'll reply with a realistic plan, timeline, and cost estimate.",
+    "form": {
+      "name": "Your name",
+      "namePlaceholder": "John Doe",
+      "email": "Email",
+      "emailPlaceholder": "john@company.com",
+      "message": "Project brief",
+      "messagePlaceholder": "Tell us about your project, timeline, and budget...",
+      "sending": "Sending...",
+      "sent": "Thanks — we'll reply soon ✓",
+      "send": "Send message",
+      "agreement": "By sending, you agree to be contacted about your inquiry."
+    },
+    "copied": "Copied"
+  },
+  "footer": {
+    "tagline": "AI-Driven Development",
+    "copyright": "All rights reserved."
+  }
+}

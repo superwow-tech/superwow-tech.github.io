@@ -1,30 +1,43 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { CenteredCard } from "../ui/CenteredCard";
+import { useTranslation } from "../../contexts/LanguageContext";
 import { services } from "../../lib/constants/services";
 
 export function Services() {
+  const { t } = useTranslation();
+
+  const serviceItems = [
+    { ...services[0], ...t.services.items.design },
+    { ...services[1], ...t.services.items.custom },
+    { ...services[2], ...t.services.items.ai },
+  ];
+
   return (
     <section id="services" className="relative mx-auto max-w-7xl px-6 py-32">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="text-center mb-16"
-      >
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
-          <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-            What we do
-          </span>
-        </h2>
-        <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-          From proof‑of‑concepts to production platforms. Modular delivery, rigorous testing, and clean hand‑offs.
-        </p>
-      </motion.div>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={t.services.title}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+            <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+              {t.services.title}
+            </span>
+          </h2>
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+            {t.services.subtitle}
+          </p>
+        </motion.div>
+      </AnimatePresence>
       <div className="grid sm:grid-cols-3 lg:grid-cols-3 gap-6">
-        {services.map((s, i) => (
+        {serviceItems.map((s, i) => (
           <CenteredCard
             key={s.title}
             delay={i * 0.1}

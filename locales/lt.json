@@ -1,0 +1,95 @@
+{
+  "nav": {
+    "home": "Pagrindinis",
+    "services": "Paslaugos",
+    "work": "Projektai",
+    "stack": "Technologijos",
+    "contact": "Kontaktai",
+    "getQuote": "Gauti pasiūlymą"
+  },
+  "hero": {
+    "tagline": "AI pagrįstas kūrimas",
+    "title": "Interneto svetainių ir verslo sprendimai vienoje vietoje.",
+    "subtitle": "Padedame jūsų verslui judėti greičiau su AI technologijomis.",
+    "startProject": "Pradėti",
+    "viewCaseStudies": "Projektai"
+  },
+  "services": {
+    "title": "Ką mes darome",
+    "subtitle": "Kuriame svetaines, įrankius ir AI sprendimus nuo idėjos iki paleidimo.",
+    "items": {
+      "design": {
+        "title": "Dizainas ir kūrimas",
+        "desc": "Patogus dizainas ir sklandi patirtis."
+      },
+      "custom": {
+        "title": "Individuali programinė įranga",
+        "desc": "Kuriame interneto sprendimus, pritaikytus jūsų verslui."
+      },
+      "ai": {
+        "title": "Dirbtinio intelekto sprendimai",
+        "desc": "AI agentai, integracijos ir automatizavimas."
+      }
+    }
+  },
+  "caseStudies": {
+    "title": "Pasirinkti darbai",
+    "subtitle": "Mūsų įgyvendinti projektai",
+    "needSimilar": "Reikia kažko panašaus?",
+    "items": {
+      "motion": {
+        "name": "Superwow Motion",
+        "role": "Animacijos kūrimas",
+        "impact": [
+          "Animuota grafika",
+          "Rinkodaros vizualai",
+          "Svetainės dizainas"
+        ]
+      },
+      "saas": {
+        "name": "Superwow SaaS",
+        "role": "SaaS platformos",
+        "impact": [
+          "Automatizavimas",
+          "Kainodaros įrankiai",
+          "Ataskaitos ir analitika"
+        ]
+      },
+      "ai": {
+        "name": "Superwow AI Solutions",
+        "role": "AI sprendimai",
+        "impact": [
+          "AI agentai",
+          "LLM integracija",
+          "Procesų automatizavimas"
+        ]
+      }
+    }
+  },
+  "techStack": {
+    "title": "Technologijos, su kuriomis dirbame",
+    "subtitle": "Naudojame naujausius ir patikimus įrankius"
+  },
+  "contact": {
+    "tagline": "Pradekime dirbti kartu",
+    "title": "Pasikalbėkime apie jūsų projektą",
+    "subtitle": "Susisieksime su jumis ir pasiūlysime aiškų planą, kainą ar pateiksime projekto pavyzdžių",
+    "form": {
+      "name": "Vardas",
+      "namePlaceholder": "Jonas Jonaitis",
+      "email": "El. paštas",
+      "emailPlaceholder": "jonas@imone.lt",
+      "message": "Žinutė",
+      "messagePlaceholder": "Trumpai papasakokite apie savo projektą...",
+      "sending": "Siunčiama...",
+      "sent": "Ačiū — netrukus susisieksime ✓",
+      "send": "Siųsti",
+      "agreement": "Siųsdami sutinkate, kad su jumis būtų susisiekta dėl užklausos."
+    },
+    "copied": "Nukopijuota"
+  },
+  "footer": {
+    "tagline": "AI-Driven Development",
+    "copyright": "All rights reserved."
+  }
+}

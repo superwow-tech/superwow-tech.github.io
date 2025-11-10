@@ -1,11 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Copy, Check } from "lucide-react";
 import { COMPANY } from "../../lib/constants/company";
+import { useTranslation } from "../../contexts/LanguageContext";
 
 export function Contact() {
+  const { t } = useTranslation();
   const [sent, setSent] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -71,61 +73,37 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-32 overflow-hidden">
+    <section id="contact" className="relative pt-32 pb-16 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-[150px]" />
       <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-purple-500/10 rounded-full blur-[150px]" />
       
       <div className="relative mx-auto max-w-4xl px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <div className="inline-block mb-4">
-            <span className="px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/5 backdrop-blur-sm text-xs uppercase tracking-[2px] font-medium text-gray-300">
-              Let's Build Something Amazing
-            </span>
-          </div>
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-            <span className="bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
-              Let's build your next release
-            </span>
-          </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-8">
-            Tell us about your goals and constraints. We'll reply with a realistic plan, timeline, and cost estimate.
-          </p>
-          
-          {/* Website link copy button */}
-          <motion.button
-            onClick={handleCopyLink}
-            initial={{ opacity: 0, y: 10 }}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={t.contact.title}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className={`inline-flex items-center gap-3 px-6 py-3 rounded-full backdrop-blur-sm transition-all group cursor-pointer ${
-              copied
-                ? 'bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-500/50'
-                : 'bg-gradient-to-br from-magenta-500/10 to-purple-500/10 border border-magenta-500/30 hover:border-magenta-500/60'
-            }`}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
           >
-            {copied ? (
-              <>
-                <span className="text-green-400 font-medium">Copied</span>
-                <Check className="w-4 h-4 text-green-400 transition-all" />
-              </>
-            ) : (
-              <>
-                <span className="text-white font-medium">{COMPANY.url}</span>
-                <Copy className="w-4 h-4 text-magenta-400 group-hover:scale-110 transition-transform" />
-              </>
-            )}
-          </motion.button>
-        </motion.div>
+            <div className="inline-block mb-4">
+              <span className="px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/5 backdrop-blur-sm text-xs uppercase tracking-[2px] font-medium text-gray-300">
+                {t.contact.tagline}
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
+              <span className="bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
+                {t.contact.title}
+              </span>
+            </h2>
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-8">
+              {t.contact.subtitle}
+            </p>
+          </motion.div>
+        </AnimatePresence>
 
         {/* Contact Form - Centered */}
         <motion.form
@@ -142,19 +120,19 @@ export function Contact() {
           <div className="space-y-5">
             <div className="grid md:grid-cols-2 gap-5">
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">Your name</label>
+                <label className="block text-sm font-medium text-gray-300 mb-2">{t.contact.form.name}</label>
                 <input
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
                   required
                   className="w-full rounded-xl border border-purple-500/30 bg-black/40 px-4 py-3 text-white placeholder-gray-500 outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all"
-                  placeholder="John Doe"
+                  placeholder={t.contact.form.namePlaceholder}
                 />
               </div>
               
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                <label className="block text-sm font-medium text-gray-300 mb-2">{t.contact.form.email}</label>
                 <input
                   name="email"
                   type="email"
@@ -162,13 +140,13 @@ export function Contact() {
                   onChange={handleInputChange}
                   required
                   className="w-full rounded-xl border border-purple-500/30 bg-black/40 px-4 py-3 text-white placeholder-gray-500 outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all"
-                  placeholder="john@company.com"
+                  placeholder={t.contact.form.emailPlaceholder}
                 />
               </div>
             </div>
             
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">Project brief</label>
+              <label className="block text-sm font-medium text-gray-300 mb-2">{t.contact.form.message}</label>
               <textarea
                 name="message"
                 value={formData.message}
@@ -176,7 +154,7 @@ export function Contact() {
                 rows={5}
                 required
                 className="w-full rounded-xl border border-purple-500/30 bg-black/40 px-4 py-3 text-white placeholder-gray-500 outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all resize-none"
-                placeholder="Tell us about your project, timeline, and budget..."
+                placeholder={t.contact.form.messagePlaceholder}
               />
             </div>
             
@@ -204,14 +182,46 @@ export function Contact() {
                   : 'bg-gradient-to-r from-purple-600 to-cyan-500 shadow-purple-500/30 hover:shadow-purple-500/50'
               }`}
             >
-              {isLoading ? 'Sending...' : sent ? "Thanks — we'll reply soon ✓" : 'Send message'}
+              {isLoading ? t.contact.form.sending : sent ? t.contact.form.sent : t.contact.form.send}
             </motion.button>
             
             <p className="text-xs text-gray-500 text-center">
-              By sending, you agree to be contacted about your inquiry.
+              {t.contact.form.agreement}
             </p>
           </div>
         </motion.form>
+
+        {/* Website link copy button */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          className="flex justify-center mt-16"
+        >
+          <motion.button
+            onClick={handleCopyLink}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className={`inline-flex items-center gap-3 px-6 py-3 rounded-full backdrop-blur-sm transition-all group cursor-pointer ${
+              copied
+                ? 'bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-500/50'
+                : 'bg-gradient-to-br from-magenta-500/10 to-purple-500/10 border border-magenta-500/30 hover:border-magenta-500/60'
+            }`}
+          >
+            {copied ? (
+              <>
+                <span className="text-green-400 font-medium">{t.contact.copied}</span>
+                <Check className="w-4 h-4 text-green-400 transition-all" />
+              </>
+            ) : (
+              <>
+                <span className="text-white font-medium">{COMPANY.url}</span>
+                <Copy className="w-4 h-4 text-magenta-400 group-hover:scale-110 transition-transform" />
+              </>
+            )}
+          </motion.button>
+        </motion.div>
       </div>
     </section>
   );

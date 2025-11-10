@@ -1,27 +1,34 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { stack } from "../../lib/constants/tech-stack";
+import { useTranslation } from "../../contexts/LanguageContext";
 
 export function TechStack() {
+  const { t } = useTranslation();
+
   return (
     <section id="stack" className="relative mx-auto max-w-7xl px-6 py-32">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="text-center mb-16"
-      >
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
-          <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-            Tech expertise & skills
-          </span>
-        </h2>
-        <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-          We pick boring‑reliable tools first, then sprinkle novelty where it matters.
-        </p>
-      </motion.div>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={t.techStack.title}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+            <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+              {t.techStack.title}
+            </span>
+          </h2>
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+            {t.techStack.subtitle}
+          </p>
+        </motion.div>
+      </AnimatePresence>
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
