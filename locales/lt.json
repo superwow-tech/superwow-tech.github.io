@@ -8,23 +8,23 @@
     "getQuote": "Gauti pasiūlymą"
   },
   "hero": {
-    "tagline": "AI pagrįstas kūrimas",
-    "title": "Interneto svetainių ir verslo sprendimai vienoje vietoje.",
-    "subtitle": "Padedame jūsų verslui judėti greičiau su AI technologijomis.",
-    "startProject": "Pradėti",
+    "tagline": "AI-Driven Development Studio",
+    "title": "Interneto svetainių ir verslo sprendimai vienoje vietoje",
+    "subtitle": "Padedame jūsų verslui judėti greičiau su AI technologijomis",
+    "startProject": "Norėtumėte dirbti kartu?",
     "viewCaseStudies": "Projektai"
   },
   "services": {
     "title": "Ką mes darome",
-    "subtitle": "Kuriame svetaines, įrankius ir AI sprendimus nuo idėjos iki paleidimo.",
+    "subtitle": "Nuo idėjos iki veikiantčio sprendimo – interneto svetainių kūrimas, atnaujinimas ir pagalba",
     "items": {
       "design": {
-        "title": "Dizainas ir kūrimas",
-        "desc": "Patogus dizainas ir sklandi patirtis."
+        "title": "Web Dizainas",
+        "desc": "Patogus, estetiškas ir aiškus dizainas."
       },
       "custom": {
         "title": "Individuali programinė įranga",
-        "desc": "Kuriame interneto sprendimus, pritaikytus jūsų verslui."
+        "desc": "Kuriame svetaines ir įrankius, pritaikytus jūsų verslo poreikiams."
       },
       "ai": {
         "title": "Dirbtinio intelekto sprendimai",
@@ -33,13 +33,13 @@
     }
   },
   "caseStudies": {
-    "title": "Pasirinkti darbai",
-    "subtitle": "Mūsų įgyvendinti projektai",
-    "needSimilar": "Reikia kažko panašaus?",
+    "title": "Darbai",
+    "subtitle": "Mūsų projektų ir paslaugų sąrašas",
+    "needSimilar": "Norėtumėte kažko panašaus?",
     "items": {
       "motion": {
         "name": "Superwow Motion",
-        "role": "Animacijos kūrimas",
+        "role": "Web Dizainas",
         "impact": [
           "Animuota grafika",
           "Rinkodaros vizualai",
@@ -50,8 +50,8 @@
         "name": "Superwow SaaS",
         "role": "SaaS platformos",
         "impact": [
-          "Automatizavimas",
-          "Kainodaros įrankiai",
+          "Verslo įrankiai",
+          "Automatizavimas ir optimizavimas",
           "Ataskaitos ir analitika"
         ]
       },
@@ -73,7 +73,7 @@
   "contact": {
     "tagline": "Pradekime dirbti kartu",
     "title": "Pasikalbėkime apie jūsų projektą",
-    "subtitle": "Susisieksime su jumis ir pasiūlysime aiškų planą, kainą ar pateiksime projekto pavyzdžių",
+    "subtitle": "Susisieksime su jumis ir pasiūlysime planą, kainą ar pateiksime projekto pavyzdžių",
     "form": {
       "name": "Vardas",
       "namePlaceholder": "Jonas Jonaitis",

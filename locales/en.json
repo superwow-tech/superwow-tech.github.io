@@ -16,19 +16,19 @@
   },
   "services": {
     "title": "What we do",
-    "subtitle": "From proof‑of‑concepts to production platforms. Modular delivery, rigorous testing, and clean hand‑offs.",
+    "subtitle": "From idea to a working solution – website creation, updates, and support",
     "items": {
       "design": {
-        "title": "Design & Development",
-        "desc": "Beautiful interfaces, smooth UX, and scalable architecture."
+        "title": "Design and Development",
+        "desc": "User-friendly design and a smooth experience."
       },
       "custom": {
         "title": "Custom Software",
-        "desc": "Full-stack web, from idea to production."
+        "desc": "Web solutions tailored to your business needs."
       },
       "ai": {
-        "title": "AI Engineering",
-        "desc": "Agents, LLM integrations, data pipelines & workflow automation."
+        "title": "AI Solutions",
+        "desc": "AI agents, integrations, and automation."
       }
     }
   },
@@ -39,10 +39,10 @@
     "items": {
       "motion": {
         "name": "Superwow Motion",
-        "role": "Motion design studio",
+        "role": "Design",
         "impact": [
           "Motion graphics",
-          "Marketing materials",
+          "Marketing visuals",
           "Website design"
         ]
       },
@@ -50,30 +50,30 @@
         "name": "Superwow SaaS",
         "role": "SaaS platform",
         "impact": [
-          "Marketing automation",
-          "Pricing optimization",
-          "Reporting and analytics"
+          "Tools for business",
+          "Automation and optimization",
+          "Reports and analytics"
         ]
       },
       "ai": {
         "name": "Superwow AI Solutions",
-        "role": "AI-powered solutions",
+        "role": "AI Development",
         "impact": [
-          "Agents",
-          "LLM integrations",
+          "AI agents",
+          "LLM integration",
           "Workflow automation"
         ]
       }
     }
   },
   "techStack": {
-    "title": "Tech expertise & skills",
-    "subtitle": "We pick boring‑reliable tools first, then sprinkle novelty where it matters."
+    "title": "Technologies We Use",
+    "subtitle": "We work with modern and reliable tools"
   },
   "contact": {
     "tagline": "Let's Build Something Amazing",
-    "title": "Let's build your next release",
-    "subtitle": "Tell us about your goals and constraints. We'll reply with a realistic plan, timeline, and cost estimate.",
+    "title": "Tell us about your project or goals",
+    "subtitle": "We’ll get in touch with a plan, estimates or project examples",
     "form": {
       "name": "Your name",
       "namePlaceholder": "John Doe",
