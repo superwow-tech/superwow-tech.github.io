@@ -1,7 +1,7 @@
 export const COMPANY = {
   name: "Superwow Tech",
   tagline: "Practical AI & Cloud solutions across every universe of your business.",
-  url: "superwow.lt",
+  url: "https://superwow.lt",
 };
 
 export const menu = [

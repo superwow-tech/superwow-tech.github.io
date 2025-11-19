@@ -16,7 +16,7 @@ export function LanguageToggle() {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       className="px-4 py-2 rounded-lg border border-purple-500/30 bg-white/5 backdrop-blur-sm text-white font-medium text-sm hover:bg-white/10 transition-colors"
-      aria-label={`Switch to ${language === "en" ? "English" : "Lithuanian"}`}
+      aria-label={`Switch to ${language === "en" ? "Lithuanian" : "English"}`}
     >
       {language === "en" ? "EN" : "LT"}
     </motion.button>
