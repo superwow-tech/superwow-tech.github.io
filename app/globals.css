@@ -89,3 +89,62 @@ body {
 .animate-glitch-fast {
   animation: tech-glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
 }
+
+/* Glitch Target Animation */
+.glitch-target {
+  position: relative;
+  animation: glitch-pulse 3s ease-in-out infinite;
+}
+
+@keyframes glitch-pulse {
+  0%, 100% {
+    transform: translate(0);
+    text-shadow: none;
+  }
+  2% {
+    transform: translate(-2px, 2px);
+    text-shadow: 2px 0 #FF00FF, -2px 0 #00FFFF;
+  }
+  4% {
+    transform: translate(2px, -2px);
+    text-shadow: -2px 0 #00FFFF, 2px 0 #FF00FF;
+  }
+  6% {
+    transform: translate(-2px, -2px);
+    text-shadow: 2px 0 #FF00FF, -2px 0 #00FFFF;
+  }
+  8% {
+    transform: translate(2px, 2px);
+    text-shadow: -2px 0 #00FFFF, 2px 0 #FF00FF;
+  }
+  10% {
+    transform: translate(0);
+    text-shadow: none;
+  }
+  50% {
+    transform: translate(0);
+    text-shadow: none;
+  }
+  52% {
+    transform: translate(-1px, 1px);
+    text-shadow: 1px 0 #FF00FF, -1px 0 #00FFFF;
+  }
+  54% {
+    transform: translate(1px, -1px);
+    text-shadow: none;
+  }
+  56% {
+    transform: translate(0);
+    text-shadow: none;
+  }
+}
+
+/* Terminal Cursor Blink */
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-cursor-blink {
+  animation: cursor-blink 1s step-end infinite;
+}

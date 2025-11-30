@@ -1,7 +1,7 @@
 export const caseStudies = [
   {
     id: "motion",
-    name: "Superwow Motion",
+    name: "Superwow Design",
     role: "Web Design",
     impact: [
       "Website design",
@@ -11,7 +11,7 @@ export const caseStudies = [
   },
   {
     id: "saas",
-    name: "Superwow SaaS",
+    name: "Superwow Web",
     role: "Website Development",
     impact: [
       "Brand / Landing pages",
@@ -21,11 +21,11 @@ export const caseStudies = [
   },
   {
     id: "ai",
-    name: "Superwow AI Solutions",
+    name: "Superwow AI",
     role: "AI Solutions",
     impact: [
       "AI agents and chat",
-      "AI integrations",
+      "AI/LLM integrations",
       "Process automation",
     ]
   },

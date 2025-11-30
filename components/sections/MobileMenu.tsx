@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "../../contexts/LanguageContext";
+import { SuperwowLogo } from "../ui/SuperwowLogo";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -63,6 +64,10 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   </Link>
                 </motion.div>
               ))}
+             </div>
+
+             <div className="flex justify-center py-8 pointer-events-none opacity-20">
+                <SuperwowLogo className="w-full max-w-[300px]" />
              </div>
 
              <div className="bg-black">

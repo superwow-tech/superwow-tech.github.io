@@ -1,33 +1,33 @@
 {
   "hero": {
-    "titles": ["PROGRAMINĖS ĮRANGOS STUDIJA", "SKAITMENINĖ INŽINERIJA", "TECHNINĖS KONSULTACIJOS"],
-    "subheadline": "Paverskite savo idėją produktu.",
-    "subheadline_2": "Greičiau, Išmaniau, ir su AI galia.",
-    "faster": "Greičiau",
-    "smarter": "Išmaniau",
-    "product": "Produktu",
-    "est": "Įkurt. 2025",
-    "action": "VEIKSMAS",
-    "explore": "TYRINĖTI GALIMYBES",
-    "status_online": "SIS.BŪSENA: PRISIJUNGTA",
-    "lat": "PLAT",
-    "lon": "ILG"
+    "titles": ["SUPERWOW TECH"],
+    "subheadline": "Turn Your Idea Into a Product.",
+    "subheadline_2": "Faster, Smarter, and Powered by",
+    "faster": "Faster",
+    "smarter": "Smarter",
+    "product": "Product",
+    "est": "Est. 2025",
+    "action": "ACTION",
+    "explore": "EXPLORE CAPABILITIES",
+    "status_online": "SYS.STATUS: ONLINE",
+    "lat": "LAT",
+    "lon": "LON"
   },
   "header": {
-    "start_project": "Pradėti Projektą",
+    "start_project": "Pradėti projektą",
     "start": "PRADĖTI",
-    "available": "Laisva Q1",
+    "available": "Laisvi Q1",
     "vilnius": "VILNIUS",
     "menu": "MENIU"
   },
   "contact": {
     "section_label": "KONTAKTAI",
-    "title": "Pasiruošę Pradėti?",
-    "desc": "Papasakokite apie savo projektą. Atsakome per 24 valandas.",
+    "title": "Pasiruošę pradėti?",
+    "desc": "Papasakokite apie projektą. Atsakysime per 24 val.",
     "labels": {
       "name": "Vardas",
       "email": "El. paštas",
-      "project_details": "Projekto Detalės"
+      "project_details": "Projekto detalės"
     },
     "placeholders": {
       "name": "Vardenis Pavardenis",
@@ -48,59 +48,59 @@
     "copied": "NUKOPIJUOTA"
   },
   "services": {
-    "label": "GALIMYBĖS",
-    "title": "Ką Mes Kuriame",
+    "label": "PASLAUGOS",
+    "title": "Ką kuriame",
     "items": {
       "01": {
-        "title": "Konversijas Didinančios Sąsajos",
-        "desc": "Kuriame pikselių tikslumo, prieinamus ir greitus vartotojo sąsajos sprendimus, kurie skatina veiksmą."
+        "title": "Efektyvios sąsajos",
+        "desc": "Kuriame tikslias, greitas ir patogias vartotojo sąsajas, kurios skatina veiksmą."
       },
       "02": {
-        "title": "Vidiniai Įrankiai ir SaaS",
-        "desc": "Skalpuojamos sistemos ir valdymo skydai, kurie optimizuoja operacijas ir įgalina jūsų komandą."
+        "title": "Vidiniai įrankiai ir SaaS",
+        "desc": "Skaluojamos sistemos ir valdymo skydai, kurie supaprastina darbą ir padeda jūsų komandai."
       },
       "03": {
-        "title": "AI Agentai ir Automatizacija",
-        "desc": "Individualūs LLM sprendimai, kurie automatizuoja sudėtingus procesus ir suteikia įžvalgas."
+        "title": "AI agentai ir automatizacija",
+        "desc": "Kuriame pritaikytas AI integracijas, kurios automatizuoja sudėtingus procesus ir suteikia įžvalgų."
       }
     }
   },
   "howWeWork": {
     "label": "KOMPETENCIJOS SRITYS",
-    "title": "Padaliniai",
+    "title": "Komandos",
     "divisions": {
       "motion": {
-        "name": "Superwow Motion",
-        "role": "Web Dizainas",
+        "name": "Superwow Design",
+        "role": "Web dizainas",
         "impact": ["Svetainių dizainas", "Prekės ženklo vizualai", "Prototipai"]
       },
       "saas": {
-        "name": "Superwow SaaS",
-        "role": "Svetainių Kūrimas",
-        "impact": ["Prekės ženklo / Landing puslapiai", "Internetinės parduotuvės", "SaaS sprendimai"]
+        "name": "Superwow Web",
+        "role": "Svetainių kūrimas",
+        "impact": ["Prekės ženklo ir landing puslapiai", "Internetinės parduotuvės", "SaaS sprendimai"]
       },
       "ai": {
-        "name": "Superwow AI Sprendimai",
-        "role": "AI Sprendimai",
+        "name": "Superwow AI",
+        "role": "AI sprendimai",
         "impact": ["AI agentai ir pokalbių robotai", "AI integracijos", "Procesų automatizavimas"]
       }
     }
   },
   "whyChooseUs": {
     "speed": {
-      "title": "AI Varomas Greitis",
-      "desc": "Naudojame AI įrankius, kad pristatytumėme greičiau nei tradicinės agentūros."
+      "title": "Greitis su AI",
+      "desc": "Naudojame AI įrankius, kad dirbtume greičiau nei tradicinės agentūros."
     },
     "ready": {
-      "title": "Paruošta Gamybai",
-      "desc": "Jokių prototipų. Pristatome kodą, paruoštą realiems vartotojams."
+      "title": "Paruošta naudoti",
+      "desc": "Jokių prototipų – rašome kodą, paruoštą realiems vartotojams."
     },
     "modern": {
-      "title": "Modernus Stack'as",
-      "desc": "Next.js, TypeScript, AI API. Naudojame įrankius, kurie skalpuojasi, o ne technologinę skolą."
+      "title": "Šiuolaikinės technologijos",
+      "desc": "Next.js, TypeScript, AI API. Naudojame įrankius, kurie lengvai plečiasi, o ne kuria technologinę skolą."
     },
     "direct": {
-      "title": "Tiesioginė Komunikacija",
+      "title": "Tiesioginė komunikacija",
       "desc": "Dirbkite tiesiogiai su įkūrėjais. Jokių vadybininkų, jokios biurokratijos."
     }
   }

@@ -1,8 +1,8 @@
 {
   "hero": {
-    "titles": ["SOFTWARE STUDIO", "DIGITAL ENGINEERING", "TECHNICAL CONSULTING"],
+    "titles": ["SUPERWOW TECH"],
     "subheadline": "Turn Your Idea Into a Product.",
-    "subheadline_2": "Faster, Smarter, and Powered by AI.",
+    "subheadline_2": "Faster, Smarter, and Powered by",
     "faster": "Faster",
     "smarter": "Smarter",
     "product": "Product",
@@ -70,17 +70,17 @@
     "title": "Divisions",
     "divisions": {
       "motion": {
-        "name": "Superwow Motion",
+        "name": "Superwow Design",
         "role": "Web Design",
         "impact": ["Website design", "Brand visuals", "Prototypes"]
       },
       "saas": {
-        "name": "Superwow SaaS",
+        "name": "Superwow Web",
         "role": "Website Development",
         "impact": ["Brand / Landing pages", "Online stores", "SaaS solutions"]
       },
       "ai": {
-        "name": "Superwow AI Solutions",
+        "name": "Superwow AI",
         "role": "AI Solutions",
         "impact": ["AI agents and chat", "AI integrations", "Process automation"]
       }

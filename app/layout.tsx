@@ -14,11 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Superwow Tech - AI-Driven Development",
+  title: "Superwow Tech - Web development",
   description: "Web development and AI solutions across every universe of your business.",
-  icons: {
-    icon: "/icon.ico",
-  },
 };
 
 export default function RootLayout({

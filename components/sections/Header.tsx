@@ -7,6 +7,7 @@ import { Plus } from "lucide-react";
 import { COMPANY } from "../../lib/constants/company";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { MobileMenu } from "./MobileMenu";
+import { SuperwowLogo } from "../ui/SuperwowLogo";
 
 // Helper component for Vilnius Time
 const VilniusTime = () => {
@@ -49,9 +50,8 @@ export function Header() {
         
         {/* Col 1: Brand */}
         <div className="flex-grow md:flex-grow-0 h-14 sm:h-16 flex items-center px-4 sm:px-6 border-r border-gray-200 overflow-hidden md:col-span-1">
-          <Link href="/" className="font-black tracking-tighter text-xl sm:text-2xl uppercase group">
-            <span>SUPERWOW </span>
-            <span className="text-[var(--color-electric)] inline-block group-hover:animate-glitch-fast">TECH</span>
+          <Link href="/" className="group">
+            <SuperwowLogo className="h-10 w-auto" />
           </Link>
         </div>
 
