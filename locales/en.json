@@ -1,8 +1,10 @@
 {
   "hero": {
-    "titles": ["SUPERWOW TECH"],
-    "subheadline": "Turn Your Idea Into a Product.",
-    "subheadline_2": "Faster, Smarter, and Powered by",
+    "titles": [
+      "SUPERWOW TECH"
+    ],
+    "subheadline": "Web & AI Solutions",
+    "subheadline_2": "Faster, Smarter and Powered by",
     "faster": "Faster",
     "smarter": "Smarter",
     "product": "Product",
@@ -37,7 +39,7 @@
     "buttons": {
       "transmit": "TRANSMIT BRIEF",
       "transmitting": "TRANSMITTING...",
-      "completed": "TRANSMISSION COMPLETE"
+      "completed": "BRIEF TRANSMITTED"
     },
     "errors": {
       "connection": "Connection failed. Please retry."
@@ -66,23 +68,35 @@
     }
   },
   "howWeWork": {
-    "label": "AREAS OF EXPERTISE",
-    "title": "Divisions",
+    "label": "OUR WORKS",
+    "title": "What We Do",
     "divisions": {
       "motion": {
         "name": "Superwow Design",
         "role": "Web Design",
-        "impact": ["Website design", "Brand visuals", "Prototypes"]
+        "impact": [
+          "Website design",
+          "Brand visuals",
+          "Prototypes"
+        ]
       },
       "saas": {
         "name": "Superwow Web",
         "role": "Website Development",
-        "impact": ["Brand / Landing pages", "Online stores", "SaaS solutions"]
+        "impact": [
+          "Brand / Landing pages",
+          "Online stores",
+          "SaaS solutions"
+        ]
       },
       "ai": {
         "name": "Superwow AI",
         "role": "AI Solutions",
-        "impact": ["AI agents and chat", "AI integrations", "Process automation"]
+        "impact": [
+          "AI agents and chat",
+          "AI integrations",
+          "Process automation"
+        ]
       }
     }
   },

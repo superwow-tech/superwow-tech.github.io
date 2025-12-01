@@ -5,27 +5,30 @@ import { ArrowDownRight, Plus } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 import { useLanguage } from "../../contexts/LanguageContext";
 
-interface HeroProps {
-  mousePosition?: { x: number; y: number };
-  onMouseMove?: (e: React.MouseEvent<HTMLElement>) => void;
-}
-
-export function Hero({ mousePosition, onMouseMove }: HeroProps) {
+export function Hero() {
   const { t } = useLanguage();
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+    const y = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+    setMousePosition({ x, y });
+  };
 
   // Typewriter Effect Logic
   const [text1, setText1] = useState("");
   const [text2, setText2] = useState("");
   const [activeLine, setActiveLine] = useState(1);
   const [isGlitching, setIsGlitching] = useState(false);
-  
+
   useEffect(() => {
     const line1Target = "SUPERWOW";
     const line2Target = "TECH";
     const totalDuration = 2000;
     const totalChars = line1Target.length + line2Target.length;
     const charDelay = totalDuration / totalChars;
-    
+
     let timeoutId: NodeJS.Timeout;
 
     const triggerGlitchLoop = () => {
@@ -92,9 +95,9 @@ export function Hero({ mousePosition, onMouseMove }: HeroProps) {
   };
 
   return (
-    <section 
+    <section
       className="pt-14 sm:pt-16 min-h-[60vh] md:min-h-[100dvh] grid grid-cols-1 md:grid-cols-12 grid-rows-[auto_auto] md:grid-rows-[60fr_40fr] relative overflow-hidden bg-white bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"
-      onMouseMove={onMouseMove}
+      onMouseMove={handleMouseMove}
     >
       {/* Interactive Grid Background */}
       <div className="absolute inset-0 pointer-events-none z-0">
@@ -102,7 +105,7 @@ export function Hero({ mousePosition, onMouseMove }: HeroProps) {
         <div className="absolute top-0 left-1/4 w-px h-full bg-gray-100 hidden md:block" />
         <div className="absolute top-0 left-2/4 w-px h-full bg-gray-100 hidden md:block" />
         <div className="absolute top-0 left-3/4 w-px h-full bg-gray-100 hidden md:block" />
-        
+
         {/* Crosshairs */}
         <div className="absolute top-24 left-6 text-gray-300"><Plus className="w-4 h-4" /></div>
         <div className="absolute top-24 right-6 text-gray-300"><Plus className="w-4 h-4" /></div>
@@ -118,9 +121,9 @@ export function Hero({ mousePosition, onMouseMove }: HeroProps) {
       </div>
 
       {/* Main Title Area */}
-      <div className="col-span-1 md:col-span-12 border-b-0 md:border-b border-gray-200 px-4 sm:px-10 md:px-20 pt-12 pb-8 md:pt-20 md:pb-20 flex flex-col justify-center items-start overflow-hidden relative z-10">
+      <div className="col-span-1 md:col-span-12 border-b-0 md:border-b border-gray-200 px-4 sm:px-10 md:px-20 pt-12 pb-8 md:pt-20 md:pb-20 flex flex-col justify-center items-start relative z-10">
         <div className="relative w-full">
-          <h1 className={`hero-headline text-black text-[12vw] leading-[1] font-extrabold max-w-[900px] ${isGlitching ? 'animate-glitch-fast' : ''}`}>
+          <h1 className={`hero-headline text-black text-[12vw] leading-[1] font-extrabold ${isGlitching ? 'animate-glitch-fast' : ''}`}>
             <span className="block min-h-[1em]">
               {text1}
               {activeLine === 1 && <Cursor />}
@@ -134,21 +137,21 @@ export function Hero({ mousePosition, onMouseMove }: HeroProps) {
       </div>
 
       {/* Bottom Left: Copy with Highlighted Keywords */}
-      <div className="col-span-1 md:col-span-8 border-b md:border-b-0 md:border-r border-gray-200 px-4 sm:px-10 md:px-20 pt-8 pb-12 md:py-10 flex flex-col justify-start relative z-10 bg-white/80 backdrop-blur-sm min-h-[200px] md:min-h-[300px]">
+      <div className="col-span-1 md:col-span-8 border-b md:border-b-0 md:border-r border-gray-200 px-4 sm:px-10 md:px-20 pt-8 pb-12 md:py-12 flex flex-col justify-start relative z-10 bg-white/80 backdrop-blur-sm min-h-[200px] md:min-h-[300px] animate-fade-in">
         <div className="max-w-2xl">
-          <h2 className="text-2xl md:text-4xl font-normal leading-tight tracking-tight mb-4 text-gray-900">
-            {t.hero.subheadline} <span className="text-black font-black">{t.hero.product}</span>. <br className="hidden md:block" />
-            <span className="text-black font-black">{t.hero.faster}</span>, <span className="text-black font-black">{t.hero.smarter}</span>, {t.hero.subheadline_2.replace('Faster, Smarter, ', '')} <span className="text-[var(--color-electric)]">AI</span>.
+          <h2 className="text-3xl md:text-4xl leading-relaxed tracking-tight mb-6 text-black">
+            <span className="font-black block">{t.hero.subheadline}</span>
+            <span className="font-normal"><span className="font-bold">Faster</span>, <span className="font-bold">Smarter</span> and <span className="whitespace-nowrap">Powered by <span className="text-[var(--color-electric)] font-black animate-pulse">AI</span></span></span>
           </h2>
         </div>
       </div>
 
       {/* Bottom Right: "The Void" / Interactive Zone */}
-      <div className="col-span-1 md:col-span-4 relative z-10 group border-b border-gray-200 md:border-b-0 bg-gray-50 overflow-hidden h-auto min-h-[120px] md:min-h-[300px]">
+      <div className="col-span-1 md:col-span-4 relative z-10 group border-b border-gray-200 md:border-b-0 bg-gray-50 hover:bg-gray-100 overflow-hidden h-auto min-h-[120px] md:min-h-[300px] transition-colors duration-300">
         {/* Interactive "Void" Effect Layer */}
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-200 via-transparent to-transparent" />
-        
-        <motion.div 
+
+        <motion.div
           ref={ref}
           className="w-full h-full px-4 sm:px-10 md:px-20 pt-6 pb-6 md:pt-10 md:pb-10 flex flex-col justify-between cursor-pointer relative z-20 hover:bg-black hover:text-white transition-colors duration-300"
           onMouseMove={handleMagneticMove}
@@ -160,21 +163,21 @@ export function Hero({ mousePosition, onMouseMove }: HeroProps) {
               {t.hero.est}
             </span>
           </div>
-          
+
           <div className="mt-8 md:mt-auto flex items-end justify-between w-full">
             <div className="relative z-10">
               <span className="block font-mono text-xs mb-1 text-gray-500 group-hover:text-gray-400 hidden md:block">{t.hero.action}</span>
               <span className="text-xl md:text-3xl font-black tracking-tight group-hover:text-white uppercase block max-w-[200px] md:max-w-none">{t.hero.explore}</span>
             </div>
-            
+
             <motion.div
               className="hidden md:block"
               whileHover={{ scale: 1.1, rotate: -45 }}
               transition={{ type: "spring", stiffness: 200 }}
             >
-               <ArrowDownRight className="w-16 h-16 md:w-24 md:h-24 group-hover:text-[var(--color-electric)] animate-bounce" strokeWidth={1} />
+              <ArrowDownRight className="w-16 h-16 md:w-24 md:h-24 group-hover:text-[var(--color-electric)] animate-bounce" strokeWidth={1} />
             </motion.div>
-             <ArrowDownRight className="w-12 h-12 md:hidden group-hover:text-[var(--color-electric)] animate-bounce" strokeWidth={1} />
+            <ArrowDownRight className="w-12 h-12 md:hidden group-hover:text-[var(--color-electric)] animate-bounce" strokeWidth={1} />
           </div>
         </motion.div>
       </div>

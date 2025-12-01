@@ -35,7 +35,7 @@ export function Contact() {
       });
 
       if (!response.ok) throw new Error('Failed to send');
-      
+
       setStatus('success');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
@@ -47,7 +47,7 @@ export function Contact() {
   return (
     <section id="contact" className="border-b border-gray-800">
       <div className="grid grid-cols-1 lg:grid-cols-2">
-        
+
         {/* Left: CTA */}
         <div className="p-8 sm:p-12 lg:p-16 border-b lg:border-b-0 lg:border-r border-gray-800 flex flex-col justify-start h-full">
           <div>
@@ -64,7 +64,7 @@ export function Contact() {
         {/* Right: Form */}
         <div className="p-8 sm:p-12 lg:p-16 bg-black">
           <form onSubmit={handleSubmit} className="space-y-10">
-            
+
             <div className="group space-y-2">
               <label className="text-xs font-mono uppercase text-gray-500 group-focus-within:text-[var(--color-electric)] transition-colors">
                 {t.contact.labels.name}
@@ -79,7 +79,7 @@ export function Contact() {
                   onChange={handleInputChange}
                   required
                   type="text"
-                  className="w-full bg-transparent border-b border-gray-700 py-4 pl-6 text-xl text-white focus:border-[var(--color-electric)] focus:border-b-2 focus:outline-none transition-all rounded-none placeholder-gray-800 font-mono"
+                  className="w-full bg-transparent border-b border-gray-700 py-4 pl-6 text-xl text-white focus:border-[var(--color-electric)] focus:border-b-2 focus:outline-none transition-all rounded-none placeholder-gray-600 font-mono"
                   placeholder={t.contact.placeholders.name}
                 />
               </div>
@@ -99,7 +99,7 @@ export function Contact() {
                   onChange={handleInputChange}
                   required
                   type="email"
-                  className="w-full bg-transparent border-b border-gray-700 py-4 pl-6 text-xl text-white focus:border-[var(--color-electric)] focus:border-b-2 focus:outline-none transition-all rounded-none placeholder-gray-800 font-mono"
+                  className="w-full bg-transparent border-b border-gray-700 py-4 pl-6 text-xl text-white focus:border-[var(--color-electric)] focus:border-b-2 focus:outline-none transition-all rounded-none placeholder-gray-600 font-mono"
                   placeholder={t.contact.placeholders.email}
                 />
               </div>

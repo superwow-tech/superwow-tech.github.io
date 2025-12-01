@@ -3,29 +3,7 @@
 import { useState, useEffect } from "react";
 import { useLanguage } from "../../contexts/LanguageContext";
 
-// Helper component for Vilnius Time
-const VilniusTime = () => {
-  const [time, setTime] = useState("");
-
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      const options: Intl.DateTimeFormatOptions = {
-        timeZone: "Europe/Vilnius",
-        hour: "2-digit",
-        minute: "2-digit",
-        hour12: false,
-      };
-      setTime(now.toLocaleTimeString("en-US", options));
-    };
-
-    updateTime();
-    const interval = setInterval(updateTime, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
-  return <span>{time}</span>;
-};
+import { VilniusTime } from "../ui/VilniusTime";
 
 export function Footer() {
   const { t } = useLanguage();
@@ -41,7 +19,7 @@ export function Footer() {
 
         {/* Right: Status */}
         <div className="flex items-center gap-3 text-xs font-mono text-gray-500 uppercase tracking-wide">
-          <span>VILNIUS <VilniusTime /></span>
+          <span><VilniusTime /></span>
           <span className="text-gray-800">•</span>
           <span className="flex items-center gap-2 text-white">
             <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />

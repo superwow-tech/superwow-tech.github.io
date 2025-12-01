@@ -1,6 +1,8 @@
 {
   "hero": {
-    "titles": ["SUPERWOW TECH"],
+    "titles": [
+      "SUPERWOW TECH"
+    ],
     "subheadline": "Turn Your Idea Into a Product.",
     "subheadline_2": "Faster, Smarter, and Powered by",
     "faster": "Faster",
@@ -14,11 +16,11 @@
     "lon": "LON"
   },
   "header": {
-    "start_project": "Pradėti projektą",
-    "start": "PRADĖTI",
-    "available": "Laisvi Q1",
+    "start_project": "Start Project",
+    "start": "START",
+    "available": "Available for Q1",
     "vilnius": "VILNIUS",
-    "menu": "MENIU"
+    "menu": "MENU"
   },
   "contact": {
     "section_label": "KONTAKTAI",
@@ -72,17 +74,29 @@
       "motion": {
         "name": "Superwow Design",
         "role": "Web dizainas",
-        "impact": ["Svetainių dizainas", "Prekės ženklo vizualai", "Prototipai"]
+        "impact": [
+          "Svetainių dizainas",
+          "Prekės ženklo vizualai",
+          "Prototipai"
+        ]
       },
       "saas": {
         "name": "Superwow Web",
         "role": "Svetainių kūrimas",
-        "impact": ["Prekės ženklo ir landing puslapiai", "Internetinės parduotuvės", "SaaS sprendimai"]
+        "impact": [
+          "Prekės ženklo ir landing puslapiai",
+          "Internetinės parduotuvės",
+          "SaaS sprendimai"
+        ]
       },
       "ai": {
         "name": "Superwow AI",
         "role": "AI sprendimai",
-        "impact": ["AI agentai ir pokalbių robotai", "AI integracijos", "Procesų automatizavimas"]
+        "impact": [
+          "AI agentai ir pokalbių robotai",
+          "AI integracijos",
+          "Procesų automatizavimas"
+        ]
       }
     }
   },
